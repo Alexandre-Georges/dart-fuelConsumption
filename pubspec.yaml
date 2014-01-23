@@ -1,0 +1,8 @@
+name: dart-fuelConsumption
+version: 0.0.1
+dependencies:
+  browser: any
+  js: any
+
+dev_dependencies:
+  unittest: any
