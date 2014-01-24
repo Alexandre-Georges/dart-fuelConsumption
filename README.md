@@ -1,4 +1,4 @@
-Dart-FuelConsumption
+dart-unitConverter
 ====================
 
 Fuel consumption conversion in Dart
