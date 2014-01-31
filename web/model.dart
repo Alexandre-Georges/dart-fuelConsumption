@@ -1,3 +1,3 @@
 class Model {
-  
+  List<Unit>
 }
