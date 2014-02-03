@@ -1,9 +1,12 @@
 library main_test;
 
 import 'package:unittest/unittest.dart';
+//import 'package:unittest/html_enhanced_config.dart';
 import '../web/converter.dart';
 
 main() {
+
+//  useHtmlEnhancedConfiguration(false);
   
   List<double> TEST_VALUES = [ -10.0, -1.0, 0.0, 1.0, 10.0 ];
   
