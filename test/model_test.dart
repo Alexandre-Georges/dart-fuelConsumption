@@ -30,7 +30,7 @@ main() {
 
     Unit unitToAdd = new Unit(null, null, null);
     model.addUnit(unitToAdd);
-    
+
     expect(model.units.length, equals(1));
     expect(model.units[0], equals(unitToAdd));
   });
