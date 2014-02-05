@@ -12,10 +12,6 @@ main() {
     test('identity', () {
       expect(IDENTITY(value), equals(value));
     });
-    
-    test('miles', () {
-      expect(METERS_TO_MILES(MILES_TO_METERS(value)), equals(value));
-    });
   }
   
   TEST_VALUES.forEach(testsForValue);
