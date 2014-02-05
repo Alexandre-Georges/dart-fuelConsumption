@@ -2,6 +2,7 @@ library converter;
 
 import 'dart:math';
 import 'unit.dart';
+import 'model.dart';
 
 const double METERS_IN_ONE_MILE = 1609.344;
 
