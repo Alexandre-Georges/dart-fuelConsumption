@@ -3,6 +3,7 @@ version: 0.0.1
 dependencies:
   browser: any
   js: any
+  polymer: any
 
 dev_dependencies:
   unittest: any
