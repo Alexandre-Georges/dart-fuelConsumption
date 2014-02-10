@@ -1,7 +1,20 @@
 <polymer-element name="my-model">
-    <template>
-        <span>fdsfsdfs</span>
-        {{model.name}}
-    </template>
-    <script type="application/dart" src="my_model_element.dart"></script>
+  <template>
+
+    <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="../css/bootstrap-theme.css" rel="stylesheet" type="text/css">
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+
+    <div class="col-md-1 col-sm-4 col-xs-6 unit" style="background-color: blue;">
+      <h2>{{model.name}}</h2>
+      <input type="text" class="form-control" placeholder="unit1.1">
+      <input type="text" class="form-control" placeholder="unit1.2">
+      <input type="text" class="form-control" placeholder="unit1.3">
+      <input type="text" class="form-control" placeholder="unit1.4">
+      <input type="text" class="form-control" placeholder="unit1.5">
+      <input type="text" class="form-control" placeholder="unit1.6">
+      <input type="text" class="form-control" placeholder="unit1.7">
+    </div>
+  </template>
+  <script type="application/dart" src="my_model_element.dart"></script>
 </polymer-element>

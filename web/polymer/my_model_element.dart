@@ -3,7 +3,9 @@ import '../converter.dart';
 
 @CustomTag('my-model')
 class MyModelElement extends PolymerElement {
-  Model model = DISTANCE;
+
+  @published
+  Model model = null;
 
   MyModelElement.created() : super.created();
 }
