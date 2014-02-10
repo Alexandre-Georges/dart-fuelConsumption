@@ -6,14 +6,12 @@
     <link href="../css/style.css" rel="stylesheet" type="text/css">
 
     <div class="col-md-1 col-sm-4 col-xs-6 unit" style="background-color: blue;">
+
       <h2>{{model.name}}</h2>
-      <input type="text" class="form-control" placeholder="unit1.1">
-      <input type="text" class="form-control" placeholder="unit1.2">
-      <input type="text" class="form-control" placeholder="unit1.3">
-      <input type="text" class="form-control" placeholder="unit1.4">
-      <input type="text" class="form-control" placeholder="unit1.5">
-      <input type="text" class="form-control" placeholder="unit1.6">
-      <input type="text" class="form-control" placeholder="unit1.7">
+      <template repeat="{{unit in model.units}}">
+        <my-unit myModelElement="{{this}}" unit="{{unit}}" reference="{{referenceUnit}}"></my-unit>
+      </template>
+
     </div>
   </template>
   <script type="application/dart" src="my_model_element.dart"></script>

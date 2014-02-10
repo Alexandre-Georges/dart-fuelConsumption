@@ -14,4 +14,9 @@ class Model {
 
   void addUnit(Unit unit) => this._units.add(unit);
 
+  void updateUnits(referenceValue) {
+    this._referenceUnit.setValue(referenceValue);
+    units.forEach((unit) => unit.setValueFromReference(referenceValue));
+  }
+
 }

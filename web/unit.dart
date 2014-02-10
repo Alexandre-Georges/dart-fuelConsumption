@@ -1,23 +1,26 @@
 class Unit {
 
-  String _name;
-  Function _unitToReference;
-  Function _referenceToUnit;
+  String _name = null;
+  double _value = null;
+  Function _unitToReference = null;
+  Function _referenceToUnit = null;
   
   Unit(this._name, this._unitToReference, this._referenceToUnit);
 
   String get name => this._name;
+  double get value => this._value;
+  void set value(value) => this._value = value;
 
-  double unitToReference(double value) {
-    return this._unitToReference(value);
+  double unitToReference() {
+    return this._unitToReference(this._value);
   }
   
-  double referenceToUnit(double value) {
-    return this._referenceToUnit(value);
+  double setValueFromReference(double referenceValue) {
+    this._value = this._referenceToUnit(referenceValue);
   }
-  
+  /*
   double convertTo(double value, Unit destinationUnit) {
     double valueInReferenceUnit = this.unitToReference(value);
     return destinationUnit.referenceToUnit(valueInReferenceUnit);
-  }
+  }*/
 }

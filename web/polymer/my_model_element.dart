@@ -8,4 +8,8 @@ class MyModelElement extends PolymerElement {
   Model model = null;
 
   MyModelElement.created() : super.created();
+
+  void updateChildren(Event e, var detail, Node target/*double referenceValue*/) {
+    print(model);
+  }
 }
