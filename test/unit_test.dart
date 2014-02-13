@@ -17,7 +17,7 @@ main() {
     expect(unit.value, isNull);
 
     unit.value = 0;
-    expect(unit.unitToReference(), equals(123));
+    expect(unit.getUnitToReference(), equals(123));
 
     unit.value = null;
     unit.setValueFromReference(0);
@@ -36,7 +36,7 @@ main() {
     void tests(value) {
 
       unit.value = value;
-      expect(unit.unitToReference(), equals(unitToReference(value)));
+      expect(unit.getUnitToReference(), equals(unitToReference(value)));
 
       unit.value = null;
       unit.setValueFromReference(value);
