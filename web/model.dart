@@ -1,3 +1,5 @@
+import 'package:observe/observe.dart';
+
 class Model {
 
   String name;
@@ -5,7 +7,9 @@ class Model {
   List<Unit> units;
 
   Model(this.name, this.referenceUnit) {
-    units = [];
+    units = toObservable([]);
+    ListPathObserver observer = new ListPathObserver(units, 'referenceValue');
+    observer.changes.listen((_) => print('change model'));
   }
 
   void addUnit(Unit unit) => this.units.add(unit);

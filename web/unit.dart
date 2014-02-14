@@ -2,7 +2,9 @@ import 'package:observe/observe.dart';
 
 class Unit extends Object with ChangeNotifier {
 
+  double _referenceValue = null;
   double _value = null;
+
   String name = null;
   Function unitToReference = null;
   Function referenceToUnit = null;
@@ -10,11 +12,19 @@ class Unit extends Object with ChangeNotifier {
   Unit(this.name, this.unitToReference, this.referenceToUnit);
 
   @reflectable
-  double get value => this._value;
+  double get referenceValue => this._referenceValue;
 
   @reflectable
+  void set referenceValue(value) {
+    print('1');
+    this._referenceValue = notifyPropertyChange(#referenceValue, _referenceValue, value);
+  }
+
+  double get value => this._value;
+
   void set value(value) {
-    this._value = notifyPropertyChange(#value, _value, value);
+    this._value = value;
+    this.referenceValue = this.unitToReference(value);
   }
 
   double getUnitToReference() {
