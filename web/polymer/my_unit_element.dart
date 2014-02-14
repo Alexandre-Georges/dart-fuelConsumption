@@ -5,20 +5,18 @@ import '../unit.dart';
 class MyUnitElement extends PolymerElement {
 
   @published
-  MyModelElement myModelElement = null;
-
-  @published
-  Unit reference = null;
-
-  @published
   Unit unit = null;
-
-  double value = null;
 
   MyUnitElement.created() : super.created();
 
+  @override
+  void enteredView() {
+    unit.value = 1;
+    unit.changes.listen((List<ChangeRecord> record) => print('change'));
+  }
+
   void eventTest(Event e, var detail, Node target) {
-    myModelElement.updateChildren();
+    unit.value = unit.value + 1;
     print("hello");
   }
 
