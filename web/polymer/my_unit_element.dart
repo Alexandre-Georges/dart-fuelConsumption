@@ -11,13 +11,13 @@ class MyUnitElement extends PolymerElement {
 
   @override
   void enteredView() {
-    unit.value = 1;
+    //unit.value = 1;
     //unit.changes.listen((List<ChangeRecord> record) => print('change'));
   }
 
   void eventTest(Event e, var detail, Node target) {
     unit.value = unit.value + 1;
-    print("hello");
+    print("hello " + unit.value.toString());
   }
 
 }

@@ -2,6 +2,7 @@ library converter;
 
 import 'dart:math';
 import 'unit.dart';
+import 'reference_unit.dart';
 import 'model.dart';
 
 const double METERS_IN_ONE_MILE = 1609.344;
@@ -15,10 +16,8 @@ Function IDENTITY_POWER(int power) {
   return closure;
 }
 
-Unit METER = new Unit('meter', IDENTITY, IDENTITY);
-Unit KILOMETER = new Unit('kilometer', IDENTITY_POWER(3), IDENTITY_POWER(-3));
-Unit MILE = new Unit('mile', (value) => METERS_IN_ONE_MILE * value, (value) => value / METERS_IN_ONE_MILE);
+ReferenceUnit METER = new ReferenceUnit('meter');
 
 Model DISTANCE = new Model('Distance', METER)
-..addUnit(KILOMETER)
-..addUnit(MILE);
+..addUnit('kilometer', IDENTITY_POWER(3), IDENTITY_POWER(-3))
+..addUnit('mile', (value) => METERS_IN_ONE_MILE * value, (value) => value / METERS_IN_ONE_MILE);

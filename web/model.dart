@@ -1,21 +1,27 @@
+import 'reference_unit.dart';
+import 'regular_unit.dart';
 import 'package:observe/observe.dart';
 
 class Model {
 
   String name;
-  Unit referenceUnit;
-  List<Unit> units;
+  ReferenceUnit referenceUnit;
+  List<RegularUnit> units;
 
   Model(this.name, this.referenceUnit) {
     units = toObservable([]);
-    ListPathObserver observer = new ListPathObserver(units, 'referenceValue');
-    observer.changes.listen((_) => print('change model'));
+    PathObserver observer = new PathObserver(referenceUnit, 'value');
+    observer.changes.listen((_) {
+      print('change model');
+      this.updateUnits(this.referenceUnit.value);
+    });
   }
 
-  void addUnit(Unit unit) => this.units.add(unit);
+  void addUnit(String name, Function unitToReference, Function referenceToUnit) {
+    this.units.add(new RegularUnit(name, unitToReference, referenceToUnit, this.referenceUnit));
+  }
 
   void updateUnits(referenceValue) {
-    this.referenceUnit.setValue(referenceValue);
     units.forEach((unit) => unit.setValueFromReference(referenceValue));
   }
 
