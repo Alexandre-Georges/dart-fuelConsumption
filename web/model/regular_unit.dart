@@ -1,6 +1,7 @@
+import 'package:observe/observe.dart';
+
 import 'unit.dart';
 import 'reference_unit.dart';
-import 'package:observe/observe.dart';
 
 class RegularUnit extends Unit {
 

@@ -1,5 +1,6 @@
 import 'package:polymer/polymer.dart';
-import '../converter.dart';
+
+import '../model/model.dart';
 
 @CustomTag('my-model')
 class MyModelElement extends PolymerElement {
@@ -9,7 +10,4 @@ class MyModelElement extends PolymerElement {
 
   MyModelElement.created() : super.created();
 
-  void updateChildren(Event e, var detail, Node target/*double referenceValue*/) {
-    print(model);
-  }
 }
