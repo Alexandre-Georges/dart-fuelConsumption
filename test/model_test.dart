@@ -1,33 +1,29 @@
 library main_test;
 
 import 'package:unittest/unittest.dart';
-import '../web/unit.dart';
-import '../web/model.dart';
+import '../web/model/unit.dart';
+import '../web/model/model.dart';
 
 main() {
 
-  test('constructor', () {
+  String name = 'name';
+  Unit referenceUnit = new Unit(null, null, null);
+  Model model = new Model(name, referenceUnit);
 
-    String name = 'name';
-    Unit referenceUnit = new Unit(null, null, null);
-
-    Model model = new Model(name, referenceUnit);
-
+  test('constructor : name', () {
     expect(model.name, equals(name));
+  });
+
+  test('constructor : reference unit', () {
     expect(model.referenceUnit, equals(referenceUnit));
+  });
+
+  test('constructor : units', () {
     expect(model.units, isNotNull);
     expect(model.units.length, equals(0));
   });
 
   test('addUnit', () {
-
-    String name = 'name';
-    Unit referenceUnit = new Unit(null, null, null);
-
-    Model model = new Model(name, referenceUnit);
-
-    expect(model.units.length, equals(0));
-
     Unit unitToAdd = new Unit(null, null, null);
     model.addUnit(unitToAdd);
 

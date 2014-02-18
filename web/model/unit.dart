@@ -3,7 +3,7 @@ import 'package:observe/observe.dart';
 class Unit extends Object with ChangeNotifier, Observable {
 
   @observable
-  double value = 123;
+  double value = null;
 
   String name = null;
   Function unitToReference = null;
