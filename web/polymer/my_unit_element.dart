@@ -1,9 +1,10 @@
 import 'package:polymer/polymer.dart';
 
 import '../model/unit.dart';
+import 'main_element.dart';
 
 @CustomTag('my-unit')
-class MyUnitElement extends PolymerElement {
+class MyUnitElement extends MainElement {
 
   @published
   Unit unit = null;
