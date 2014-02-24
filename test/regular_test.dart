@@ -1,20 +1,23 @@
 import 'package:unittest/unittest.dart';
-import '../web/model/unit.dart';
+import '../web/model/reference_unit.dart';
+import '../web/model/regular_unit.dart';
 
 main() {
+
+  ReferenceUnit referenceUnit = new ReferenceUnit(null);
 
   String name = 'name';
   double constructorUnitToReference(double value) => 123;
   double constructorReferenceToUnit(double value) => 321;
 
-  Unit constructorUnit = new Unit(name, constructorUnitToReference, constructorReferenceToUnit);
+  RegularUnit constructorUnit = new RegularUnit(name, constructorUnitToReference, constructorReferenceToUnit, referenceUnit);
 
   test('constructor : name', () {
     expect(constructorUnit.name, equals(name));
   });
 
   test('constructor : value', () {
-    expect(constructorUnit.value, isNull);
+    expect(constructorUnit.value, equals(constructorReferenceToUnit(referenceUnit.value)));
   });
 
   test('constructor : unit to reference', () {
@@ -33,7 +36,7 @@ main() {
   double conversionUnitToReference(double value) => value * 2;
   double conversionReferenceToUnit(double value) => value / 2;
 
-  Unit conversionUnit = new Unit('name', conversionUnitToReference, conversionReferenceToUnit);
+  RegularUnit conversionUnit = new RegularUnit('name', conversionUnitToReference, conversionReferenceToUnit, referenceUnit);
 
   testValues.forEach((double testValue) {
     test('unit to reference : ' + testValue.toString(), () {
