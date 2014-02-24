@@ -13,7 +13,6 @@ class Model {
     units = [];
     PathObserver observer = new PathObserver(referenceUnit, 'value');
     observer.changes.listen((_) {
-      print('change reference unit');
       this.updateUnits(this.referenceUnit.value);
     });
   }

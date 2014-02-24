@@ -13,7 +13,6 @@ class MyUnitElement extends MainElement {
 
   void eventTest(Event e, var detail, Node target) {
     unit.value = unit.value + 1;
-    print("hello " + unit.value.toString());
   }
 
 }

@@ -10,7 +10,6 @@ class RegularUnit extends Unit {
   RegularUnit(String name, Function unitToReference, Function referenceToUnit, this.referenceUnit) : super(name, unitToReference, referenceToUnit) {
     PathObserver observer = new PathObserver(this, 'value');
     observer.changes.listen((List<ChangeRecord> changeRecords) {
-      print('change regular ' + changeRecords.last.newValue.toString());
       this.referenceUnit.value = this.unitToReference(changeRecords.last.newValue);
     });
   }

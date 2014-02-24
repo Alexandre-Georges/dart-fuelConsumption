@@ -8,7 +8,6 @@ class MyPolymerExpressions extends PolymerExpressions {
   static MyPolymerExpressions INSTANCE = new MyPolymerExpressions();
 
   static Map<String, Function> GLOBALS = {
-      'uppercase': uppercase,
       'roundTwoDigit': roundTwoDigit
   };
 
