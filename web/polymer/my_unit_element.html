@@ -1,6 +1,18 @@
 <polymer-element name="my-unit">
   <template>
-    <input type="text" class="form-control" placeholder="{{unit.name}}" on-click="{{eventTest}}" value="{{unit.value | roundTwoDigit}}">
+    <style type="text/css">
+      .unitRow {
+        margin: 5px 10px 0 10px;
+      }
+    </style>
+    <div class="unitRow">
+      <div class="row">
+        {{unit.name}}
+      </div>
+      <div class="row">
+        <input type="text" class="form-control" placeholder="{{unit.name}}" on-keyup="{{eventTest2}}" on-click="{{eventTest}}" value="{{unit.value | roundTwoDigit}}">
+      </div>
+    </div>
   </template>
   <script type="application/dart" src="my_unit_element.dart"></script>
 </polymer-element>
