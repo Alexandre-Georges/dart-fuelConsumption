@@ -12,6 +12,7 @@ class MyUnitElement extends MainElement {
 
   String displayValue = null;
   boolean editing = false;
+  boolean editing2 = false;
 
   /**
    * Getter and setter for the UI
@@ -23,7 +24,8 @@ class MyUnitElement extends MainElement {
   void set value(String value) {
     print('set ' + value + ' ' + double.parse(value).toString());
     this.editing = true;
-    this.unit.newValue = double.parse(value);
+    this.editing2 = true;
+    this.unit.value = double.parse(value);
     this.displayValue = notifyPropertyChange(#value, displayValue, value);
   }
 
@@ -36,7 +38,7 @@ class MyUnitElement extends MainElement {
 
     PathObserver observer = new PathObserver(this.unit, 'value');
     observer.changes.listen((_) {
-      print(this.unit.toString() + ' ' + this.editing.toString());
+      print(this.unit.toString() + ' ' + this.editing.toString() + ' ' + this.unit.value.toString());
       if (!this.editing) {
         this.displayValue = notifyPropertyChange(#value, this.displayValue, roundTwoDigit(this.unit.value));
       } else {

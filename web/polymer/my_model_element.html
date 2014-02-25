@@ -7,7 +7,7 @@
         <my-reference-unit unit="{{model.referenceUnit}}"></my-reference-unit>
       </template>
       <template repeat="{{unit in model.units}}">
-        <my-regular-unit unit="{{unit}}"></my-regular-unit>
+        <my-regular-unit unit="{{unit}}" reference="{{model.referenceUnit}}"></my-regular-unit>
       </template>
 
     </div>

@@ -10,11 +10,11 @@ class RegularUnit extends Unit {
   RegularUnit(String name, Function unitToReference, Function referenceToUnit, this.referenceUnit) : super(name, unitToReference, referenceToUnit) {
     this.setValueFromReference(this.referenceUnit.value);
   }
-
+/*
   void set newValue(double value) {
     print('newValue regular ' + value.toString());
     this.value = value;
     this.referenceUnit.value = this.unitToReference(this.value);
-  }
+  }*/
 
 }
