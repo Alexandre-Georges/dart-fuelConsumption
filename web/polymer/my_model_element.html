@@ -3,7 +3,9 @@
     <div class="col-md-2 col-sm-4 col-xs-6 unit" style="background-color: blue;">
 
       <h2>{{model.name}}</h2>
-      <my-unit unit="{{model.referenceUnit}}"></my-unit>
+      <template bind>
+        <my-unit unit="{{model.referenceUnit}}"></my-unit>
+      </template>
       <template repeat="{{unit in model.units}}">
         <my-unit unit="{{unit}}"></my-unit>
       </template>
