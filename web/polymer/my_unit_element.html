@@ -10,7 +10,8 @@
         {{unit.name}}
       </div>
       <div class="row">
-        <input type="text" class="form-control" placeholder="{{unit.name}}" on-keyup="{{eventTest2}}" on-click="{{eventTest}}" value="{{unit.value | roundTwoDigit}}">
+          <!-- on-keyup="{{eventTest2}}"-->
+        <input type="text" class="form-control" placeholder="{{unit.name}}" on-click="{{eventTest}}" value="{{value}}">
       </div>
     </div>
   </template>

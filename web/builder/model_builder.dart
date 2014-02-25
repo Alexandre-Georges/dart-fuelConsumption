@@ -10,4 +10,4 @@ RegularUnit MILE = new RegularUnit('mile', MILES_TO_METER, METER_TO_MILES, METER
 
 Model DISTANCE = new Model('Distance', METER)
   ..addUnit(KILOMETER)
-  ..addUnit(MILE);
+/*  ..addUnit(MILE)*/;
