@@ -15,10 +15,10 @@ class MyRegularUnitElement extends MyUnitElement {
   void enteredView() {
     super.enteredView();
 
-    ObjectObserver<Unit, double> observer = new ObjectObserver<Unit, double>(this.unit, 'value');
+/*    ObjectObserver<Unit, double> observer = new ObjectObserver<Unit, double>(this.unit, 'value');
     observer.changes.listen((List<ObjectChangeRecord> changeRecords) {
       print('here ' + changeRecords[0].object.toString() + ' ' + changeRecords[0].oldValue.toString() + ' ' + changeRecords[0].newValue.toString());
-    });
+    });*/
 
    /* PathObserver valueObserver = new PathObserver(this.unit, 'value');
     valueObserver.changes.listen((_) {

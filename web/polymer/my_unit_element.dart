@@ -35,7 +35,7 @@ class MyUnitElement extends MainElement {
     super.enteredView();
 
     this.displayValue = notifyPropertyChange(#value, this.displayValue, this.unit.value);
-
+/*
     PathObserver observer = new PathObserver(this.unit, 'value');
     observer.changes.listen((_) {
       print(this.unit.toString() + ' ' + this.editing.toString() + ' ' + this.unit.value.toString());
@@ -44,7 +44,7 @@ class MyUnitElement extends MainElement {
       } else {
         this.editing = false;
       }
-    });
+    });*/
   }
 
   void eventTest(Event e, var detail, Node target) {
