@@ -4,10 +4,10 @@
 
       <h2>{{model.name}}</h2>
       <template bind>
-        <my-reference-unit unit="{{model.referenceUnit}}"></my-reference-unit>
+        <my-unit unit="{{model.referenceUnit}}"></my-unit>
       </template>
       <template repeat="{{unit in model.units}}">
-        <my-regular-unit unit="{{unit}}" reference="{{model.referenceUnit}}"></my-regular-unit>
+        <my-unit unit="{{unit}}" reference="{{model.referenceUnit}}"></my-unit>
       </template>
 
     </div>
