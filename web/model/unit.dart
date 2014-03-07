@@ -18,4 +18,8 @@ class Unit extends Object with ChangeNotifier, Observable {
   double setValueFromReference(double referenceValue) {
     this.value = this.referenceToUnit(referenceValue);
   }
+
+  String toString() {
+    return 'Unit with name: ' + this.name;
+  }
 }
