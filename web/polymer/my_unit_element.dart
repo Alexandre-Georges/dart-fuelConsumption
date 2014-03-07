@@ -12,7 +12,6 @@ class MyUnitElement extends MainElement {
 
   String displayValue = null;
   boolean editing = false;
-  boolean editing2 = false;
 
   /**
    * Getter and setter for the UI
@@ -24,7 +23,6 @@ class MyUnitElement extends MainElement {
   void set value(String value) {
     print('set ' + value + ' ' + double.parse(value).toString());
     this.editing = true;
-    this.editing2 = true;
     this.unit.value = double.parse(value);
     this.displayValue = notifyPropertyChange(#value, displayValue, value);
   }
@@ -32,10 +30,10 @@ class MyUnitElement extends MainElement {
   MyUnitElement.created() : super.created();
 
   void enteredView() {
-    super.enteredView();
 
+    super.enteredView();
     this.displayValue = notifyPropertyChange(#value, this.displayValue, this.unit.value);
-/*
+
     PathObserver observer = new PathObserver(this.unit, 'value');
     observer.changes.listen((_) {
       print(this.unit.toString() + ' ' + this.editing.toString() + ' ' + this.unit.value.toString());
@@ -44,11 +42,19 @@ class MyUnitElement extends MainElement {
       } else {
         this.editing = false;
       }
-    });*/
+    });
   }
-
+/*
   void eventTest(Event e, var detail, Node target) {
-    //unit.value = unit.value + 1;
+    unit.value = unit.value + 1;
+    this.displayValue = notifyPropertyChange(#value, this.displayValue, this.unit.value);
+  }*/
+
+  void onMyChange(Event e, var detail, Node target) {
+    this.displayValue = notifyPropertyChange(#value, this.displayValue, roundTwoDigit(this.unit.value));
   }
 
+  void eventTest2(Event e, var detail, Node target) {
+    this.displayValue = notifyPropertyChange(#value, this.displayValue, roundTwoDigit(this.unit.value));
+  }
 }

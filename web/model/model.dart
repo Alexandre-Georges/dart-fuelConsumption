@@ -17,4 +17,18 @@ class Model {
     this.units.add(regularUnit);
   }
 
+  void updateUnitValues(Unit originUnit) {
+    this.updateUnitValue(originUnit, this.referenceUnit);
+    this.units.forEach((Unit unit) {
+      this.updateUnitValue(originUnit, unit);
+    });
+  }
+
+  void updateUnitValue(Unit originUnit, Unit destinationUnit) {
+    if(originUnit != destinationUnit) {
+      print('updating ' + destinationUnit.toString() + 'from ' + originUnit.toString());
+      destinationUnit.setValueFromReference(originUnit.getUnitToReference());
+    }
+  }
+
 }
