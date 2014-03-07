@@ -1,5 +1,3 @@
-import 'package:observe/observe.dart';
-
 import 'unit.dart';
 
 class RegularUnit extends Unit {
@@ -8,4 +6,7 @@ class RegularUnit extends Unit {
     this.setValueFromReference(referenceUnit.value);
   }
 
+  String toString() {
+    return 'RegularUnit with name: ' + this.name;
+  }
 }

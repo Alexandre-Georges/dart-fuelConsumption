@@ -1,8 +1,9 @@
 import 'package:polymer/polymer.dart';
 
+import 'main_element.dart';
+
 import '../model/model.dart';
 import '../builder/model_builder.dart';
-import 'main_element.dart';
 
 @CustomTag('my-converter')
 class MyConverterElement extends MainElement {

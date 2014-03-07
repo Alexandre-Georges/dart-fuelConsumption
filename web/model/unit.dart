@@ -22,4 +22,5 @@ class Unit extends Object with Observable {
   String toString() {
     return 'Unit with name: ' + this.name;
   }
+
 }

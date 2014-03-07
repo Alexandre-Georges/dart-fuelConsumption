@@ -1,8 +1,9 @@
 import 'package:polymer/polymer.dart';
 
+import 'main_element.dart';
+
 import '../transformers/transformers.dart';
 import '../model/unit.dart';
-import 'main_element.dart';
 
 @CustomTag('my-unit')
 class MyUnitElement extends MainElement {
@@ -44,11 +45,6 @@ class MyUnitElement extends MainElement {
       }
     });
   }
-/*
-  void eventTest(Event e, var detail, Node target) {
-    unit.value = unit.value + 1;
-    this.displayValue = notifyPropertyChange(#value, this.displayValue, this.unit.value);
-  }*/
 
   void onMyChange(Event e, var detail, Node target) {
     this.displayValue = notifyPropertyChange(#value, this.displayValue, roundTwoDigit(this.unit.value));
