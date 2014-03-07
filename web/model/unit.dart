@@ -1,6 +1,6 @@
 import 'package:observe/observe.dart';
 
-class Unit extends Object with ChangeNotifier, Observable {
+class Unit extends Object with Observable {
 
   @observable
   double value = null;
