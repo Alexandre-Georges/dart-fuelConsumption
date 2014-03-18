@@ -7,10 +7,10 @@ import 'package:observe/observe.dart';
 import 'object_observer.dart';
 import 'object_change_record.dart';
 
-class ListObjectObserver<O, V> {
+class ListObjectObserver<V> {
 
-  List<O> _objects;
-  List<ObjectObserver<O, V>> _observers;
+  List<Observable> _objects;
+  List<ObjectObserver<V>> _observers;
   String _propertyName;
 
   StreamController _changes;
@@ -25,8 +25,8 @@ class ListObjectObserver<O, V> {
     if (_observers == null) {
       this._observers = [];
 
-      this._objects.forEach((O object) {
-        ObjectObserver<O, V> observer = new ObjectObserver<O, V>(object, this._propertyName);
+      this._objects.forEach((Observable object) {
+        ObjectObserver<V> observer = new ObjectObserver<V>(object, this._propertyName);
         observer.changes.listen((List<ObjectChangeRecord> changeRecords) {
           if (this.hasObservers) {
             this.notifyChange(changeRecords);

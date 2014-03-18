@@ -21,10 +21,10 @@ class MyModelElement extends MainElement {
   void enteredView() {
     super.enteredView();
 
-    ListObjectObserver<Unit, double> observer = new ListObjectObserver<Unit, double>(this.model.units, 'value');
+    ListObjectObserver<double> observer = new ListObjectObserver<double>(this.model.units, 'value');
     observer.changes.listen(this.updateUnit);
 
-    ObjectObserver<Unit, double> referenceObserver = new ObjectObserver<Unit, double>(this.model.referenceUnit, 'value');
+    ObjectObserver<double> referenceObserver = new ObjectObserver<double>(this.model.referenceUnit, 'value');
     referenceObserver.changes.listen(this.updateUnit);
   }
 

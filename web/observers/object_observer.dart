@@ -6,9 +6,9 @@ import 'dart:mirrors';
 import 'package:observe/observe.dart';
 import 'object_change_record.dart';
 
-class ObjectObserver<O, V> {
+class ObjectObserver<V> {
 
-  O _object;
+  Observable _object;
   V _currentValue;
   Symbol _valueSymbol;
 
