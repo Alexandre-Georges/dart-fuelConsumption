@@ -1,3 +1,5 @@
+library my_model_unit;
+
 import 'package:observe/observe.dart';
 
 class Unit extends Object with Observable {

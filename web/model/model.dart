@@ -1,5 +1,6 @@
-import 'package:observe/observe.dart';
+library my_model_model;
 
+import 'unit.dart';
 import 'reference_unit.dart';
 import 'regular_unit.dart';
 

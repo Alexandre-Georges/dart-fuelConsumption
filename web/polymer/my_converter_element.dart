@@ -2,7 +2,7 @@ import 'package:polymer/polymer.dart';
 
 import 'main_element.dart';
 
-import '../model/model.dart';
+import '../model/import.dart';
 import '../builder/model_builder.dart';
 
 @CustomTag('my-converter')

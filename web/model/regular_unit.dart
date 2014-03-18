@@ -1,3 +1,5 @@
+library my_model_regular_unit;
+
 import 'unit.dart';
 
 class RegularUnit extends Unit {

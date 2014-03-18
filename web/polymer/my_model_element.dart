@@ -6,8 +6,7 @@ import '../observers/list_object_observer.dart';
 
 import 'main_element.dart';
 
-import '../model/unit.dart';
-import '../model/model.dart';
+import '../model/import.dart';
 
 @CustomTag('my-model')
 class MyModelElement extends MainElement {

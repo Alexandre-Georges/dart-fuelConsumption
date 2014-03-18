@@ -1,3 +1,5 @@
+library my_model_reference_unit;
+
 import 'unit.dart';
 import '../converter/converter.dart';
 

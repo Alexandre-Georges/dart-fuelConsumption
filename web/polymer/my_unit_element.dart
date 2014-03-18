@@ -3,7 +3,7 @@ import 'package:polymer/polymer.dart';
 import 'main_element.dart';
 
 import '../transformers/transformers.dart';
-import '../model/unit.dart';
+import '../model/import.dart';
 
 @CustomTag('my-unit')
 class MyUnitElement extends MainElement {
