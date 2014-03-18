@@ -3,7 +3,7 @@ library my_polymer_my_polymer_expressions;
 import 'package:polymer/polymer.dart';
 import 'package:polymer_expressions/polymer_expressions.dart';
 
-import '../transformers/transformers.dart';
+import '../transformers/import.dart';
 
 class MyPolymerExpressions extends PolymerExpressions {
 

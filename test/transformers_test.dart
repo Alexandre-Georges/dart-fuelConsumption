@@ -1,5 +1,5 @@
 import 'package:unittest/unittest.dart';
-import '../web/transformers/transformers.dart';
+import '../web/transformers/import.dart';
 
 main() {
 

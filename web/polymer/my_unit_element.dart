@@ -4,7 +4,7 @@ import 'package:polymer/polymer.dart';
 
 import 'main_element.dart';
 
-import '../transformers/transformers.dart';
+import '../transformers/import.dart';
 import '../model/import.dart';
 
 @CustomTag('my-unit')
