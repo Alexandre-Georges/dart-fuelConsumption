@@ -1,3 +1,5 @@
+library my_observers_object_change_record;
+
 class ObjectChangeRecord<O, V> {
 
   final O object;

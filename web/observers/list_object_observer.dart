@@ -1,3 +1,5 @@
+library my_observers_list_object_observer;
+
 import 'dart:async';
 import 'dart:collection' show UnmodifiableListView;
 import 'dart:mirrors';

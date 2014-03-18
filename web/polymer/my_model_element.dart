@@ -1,8 +1,6 @@
 import 'package:polymer/polymer.dart';
 
-import '../observers/object_change_record.dart';
-import '../observers/object_observer.dart';
-import '../observers/list_object_observer.dart';
+import '../observers/import.dart';
 
 import 'main_element.dart';
 
