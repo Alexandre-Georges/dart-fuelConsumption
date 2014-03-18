@@ -1,4 +1,5 @@
 import 'package:polymer/polymer.dart';
+import 'package:template_binding/template_binding.dart';
 
 import 'my_polymer_expressions.dart';
 

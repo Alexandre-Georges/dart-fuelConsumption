@@ -12,7 +12,7 @@ class MyUnitElement extends MainElement {
   Unit unit = null;
 
   String displayValue = null;
-  boolean editing = false;
+  bool editing = false;
 
   /**
    * Getter and setter for the UI
