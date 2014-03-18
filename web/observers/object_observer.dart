@@ -32,7 +32,7 @@ class ObjectObserver<V> {
    */
   void observed() {
     this._setCurrentValue(this._getCurrentValue());
-    this._object.changes.listen((List<PropertyChangeRecord> records) {
+    this._object.changes.listen((List<ChangeRecord> records) {
       for (var record in records) {
         if ((record as PropertyChangeRecord).name == _valueSymbol) {
           _updateObservedValue();
