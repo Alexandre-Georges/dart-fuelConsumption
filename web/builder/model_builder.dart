@@ -1,6 +1,6 @@
 library my_builder_model_builder;
 
-import '../converter/converter.dart';
+import '../converter/import.dart';
 import '../model/import.dart';
 
 ReferenceUnit METER = new ReferenceUnit('meter');

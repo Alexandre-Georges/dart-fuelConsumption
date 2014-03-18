@@ -1,4 +1,4 @@
-library converter;
+library my_converter_converter;
 
 import 'dart:math';
 
