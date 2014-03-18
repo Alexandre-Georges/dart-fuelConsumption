@@ -1,3 +1,5 @@
+library my_polymer_main_element;
+
 import 'package:polymer/polymer.dart';
 import 'package:template_binding/template_binding.dart';
 

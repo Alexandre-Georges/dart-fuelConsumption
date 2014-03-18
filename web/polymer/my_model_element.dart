@@ -1,3 +1,5 @@
+library my_polymer_my_model_element;
+
 import 'package:polymer/polymer.dart';
 
 import '../observers/import.dart';

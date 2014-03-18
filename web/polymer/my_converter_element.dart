@@ -1,3 +1,5 @@
+library my_polymer_my_converter_element;
+
 import 'package:polymer/polymer.dart';
 
 import 'main_element.dart';
