@@ -29,6 +29,14 @@ main() {
       expect(identityPower(testValue), equals(testValue / 1000.0));
     });
 
+    test('miles to meters : ' + testValue.toString(), () {
+      expect(MILES_TO_METERS(METERS_TO_MILES(testValue)).roundToDouble(), equals(testValue));
+    });
+
+    test('yards to meters : ' + testValue.toString(), () {
+      expect(YARDS_TO_METERS(METERS_TO_YARDS(testValue)).roundToDouble(), equals(testValue));
+    });
+
   });
 
 }
