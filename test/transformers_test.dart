@@ -1,3 +1,5 @@
+library my_test_tranformers;
+
 import 'package:unittest/unittest.dart';
 import '../web/transformers/import.dart';
 

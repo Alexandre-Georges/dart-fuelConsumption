@@ -1,5 +1,7 @@
+library my_test_reference;
+
 import 'package:unittest/unittest.dart';
-import '../web/model/reference_unit.dart';
+import '../web/model/import.dart';
 
 main() {
 
@@ -12,10 +14,10 @@ main() {
   });
 
   test('constructor : value', () {
-    expect(referenceUnit.value, equals(0));
+    expect(referenceUnit.value, equals(0.0));
   });
 
-  List<double> testValues = [ -10, -1, 0, 1, 10 ];
+  List<double> testValues = [ -10.0, -1.0, 0.0, 1.0, 10.0 ];
   testValues.forEach((double testValue) {
 
     test('constructor : unit to reference', () {

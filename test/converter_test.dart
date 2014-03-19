@@ -1,4 +1,7 @@
+library my_test_converter;
+
 import 'package:unittest/unittest.dart';
+
 import '../web/converter/import.dart';
 
 main() {
@@ -18,12 +21,12 @@ main() {
 
     test('identity power 3', () {
       Function identityPower = IDENTITY_POWER(3);
-      expect(identityPower(testValue), equals(testValue * 1000));
+      expect(identityPower(testValue), equals(testValue * 1000.0));
     });
 
     test('identity power -3', () {
       Function identityPower = IDENTITY_POWER(-3);
-      expect(identityPower(testValue), equals(testValue / 1000));
+      expect(identityPower(testValue), equals(testValue / 1000.0));
     });
 
   });

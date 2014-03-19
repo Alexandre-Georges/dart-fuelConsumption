@@ -5,9 +5,11 @@ import '../model/import.dart';
 
 ReferenceUnit METER = new ReferenceUnit('meter');
 RegularUnit KILOMETER = new RegularUnit('kilometer', IDENTITY_POWER(3), IDENTITY_POWER(-3), METER);
-RegularUnit MILE = new RegularUnit('mile', MILES_TO_METER, METER_TO_MILES, METER);
+RegularUnit MILE = new RegularUnit('mile', MILES_TO_METERS, METERS_TO_MILES, METER);
+RegularUnit YARD = new RegularUnit('yard', YARDS_TO_METERS, METERS_TO_YARDS, METER);
 
 
 Model DISTANCE = new Model('Distance', METER)
   ..addUnit(KILOMETER)
-  ..addUnit(MILE);
+  ..addUnit(MILE)
+  ..addUnit(YARD);
