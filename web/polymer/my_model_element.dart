@@ -36,6 +36,7 @@ class MyModelElement extends MainElement {
     } else {
       Unit currentUnit = changeRecords.last.object as Unit;
 
+      this.unitToIgnore.add(this.model.referenceUnit);
       this.unitToIgnore.addAll(this.model.units);
       this.unitToIgnore.remove(currentUnit);
 
