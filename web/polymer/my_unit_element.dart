@@ -1,5 +1,6 @@
 library my_polymer_my_unit_element;
 
+import 'dart:html';
 import 'package:polymer/polymer.dart';
 
 import 'main_element.dart';
@@ -24,10 +25,12 @@ class MyUnitElement extends MainElement {
   }
 
   void set value(String value) {
-    print('set ' + value + ' ' + double.parse(value).toString());
-    this.editing = true;
-    this.unit.value = double.parse(value);
-    this.displayValue = notifyPropertyChange(#value, displayValue, value);
+    try {
+      print('set ' + value + ' ' + double.parse(value).toString());
+      this.editing = true;
+      this.unit.value = double.parse(value);
+      this.displayValue = notifyPropertyChange(#value, displayValue, value);
+    } on FormatException {}
   }
 
   MyUnitElement.created() : super.created();
@@ -35,8 +38,7 @@ class MyUnitElement extends MainElement {
   void enteredView() {
 
     super.enteredView();
-    this.displayValue = notifyPropertyChange(#value, this.displayValue, this.unit.value);
-
+    this.displayValue = notifyPropertyChange(#value, this.displayValue, this.unit.value.toString());
     PathObserver observer = new PathObserver(this.unit, 'value');
     observer.changes.listen((_) {
       print(this.unit.toString() + ' ' + this.editing.toString() + ' ' + this.unit.value.toString());
