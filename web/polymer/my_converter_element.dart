@@ -14,6 +14,8 @@ class MyConverterElement extends MainElement {
   List<Model> models = new List();
 
   MyConverterElement.created() : super.created() {
-    models.add(DISTANCE);
+    models
+      ..add(DISTANCE)
+      ..add(TEMPERATURE);
   }
 }

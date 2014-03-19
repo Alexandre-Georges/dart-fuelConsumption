@@ -37,6 +37,10 @@ main() {
       expect(YARDS_TO_METERS(METERS_TO_YARDS(testValue)).roundToDouble(), equals(testValue));
     });
 
+    test('fahrenheits to celsius : ' + testValue.toString(), () {
+      expect(FAHRENHEITS_TO_CELSIUS(CELSIUS_TO_FAHRENHEITS(testValue)).roundToDouble(), equals(testValue));
+    });
+
   });
 
 }
