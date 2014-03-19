@@ -41,6 +41,10 @@ main() {
       expect(FAHRENHEITS_TO_CELSIUS(CELSIUS_TO_FAHRENHEITS(testValue)).roundToDouble(), equals(testValue));
     });
 
+    test('pounds to kilograms : ' + testValue.toString(), () {
+      expect(POUNDS_TO_KILOGRAMS(KILOGRAMS_TO_POUNDS(testValue)).roundToDouble(), equals(testValue));
+    });
+
   });
 
 }

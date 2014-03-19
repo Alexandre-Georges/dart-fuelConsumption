@@ -16,6 +16,7 @@ class MyConverterElement extends MainElement {
   MyConverterElement.created() : super.created() {
     models
       ..add(DISTANCE)
-      ..add(TEMPERATURE);
+      ..add(TEMPERATURE)
+      ..add(WEIGHT);
   }
 }

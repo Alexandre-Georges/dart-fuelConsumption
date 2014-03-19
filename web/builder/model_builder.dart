@@ -19,3 +19,10 @@ RegularUnit FAHRENHEIT = new RegularUnit('fahrenheit', FAHRENHEITS_TO_CELSIUS, C
 
 Model TEMPERATURE = new Model('Temperature', CELSIUS)
   ..addUnit(FAHRENHEIT);
+
+
+ReferenceUnit KILOGRAM = new ReferenceUnit('kilogram');
+RegularUnit POUND = new RegularUnit('pound', POUNDS_TO_KILOGRAMS, KILOGRAMS_TO_POUNDS, KILOGRAM);
+
+Model WEIGHT = new Model('Weight', KILOGRAM)
+  ..addUnit(POUND);
