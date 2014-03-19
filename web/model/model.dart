@@ -27,7 +27,6 @@ class Model {
 
   void updateUnitValue(Unit originUnit, Unit destinationUnit) {
     if(originUnit != destinationUnit) {
-      print('updating ' + destinationUnit.toString() + 'from ' + originUnit.toString());
       destinationUnit.setValueFromReference(originUnit.getUnitToReference());
     }
   }

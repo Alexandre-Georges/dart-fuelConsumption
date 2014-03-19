@@ -31,12 +31,10 @@ class MyModelElement extends MainElement {
   void updateUnit(List<ObjectChangeRecord> changeRecords) {
     if (this.unitToIgnore.length > 0) {
       changeRecords.forEach((ObjectChangeRecord objectChangeRecord) {
-        print('removeUnit ' + (objectChangeRecord.object as Unit).name);
         unitToIgnore.remove(objectChangeRecord.object);
       });
     } else {
       Unit currentUnit = changeRecords.last.object as Unit;
-      print('updateUnit ' + currentUnit.name);
 
       this.unitToIgnore.addAll(this.model.units);
       this.unitToIgnore.remove(currentUnit);
