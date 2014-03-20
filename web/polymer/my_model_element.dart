@@ -13,6 +13,8 @@ class MyModelElement extends MainElement {
 
   @published
   Model model = null;
+  @published
+  String color = null;
 
   List<Unit> unitToIgnore = [];
 

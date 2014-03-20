@@ -2,8 +2,8 @@
   <template>
     <div class="container">
       <div class="row">
-        <template repeat="{{model in models}}">
-          <my-model model="{{model}}" ></my-model>
+        <template repeat="{{model in models | enumerate}}">
+          <my-model model="{{model.value}}" color="{{getColor(model.index)}}"></my-model>
         </template>
       </div>
     </div>
