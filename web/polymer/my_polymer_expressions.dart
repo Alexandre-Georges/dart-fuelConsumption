@@ -11,7 +11,7 @@ class MyPolymerExpressions extends PolymerExpressions {
 
   static Map<String, Function> GLOBALS = {
       'roundTwoDigit': roundTwoDigit
-  };
+  }..addAll(PolymerExpressions.DEFAULT_GLOBALS);
 
   MyPolymerExpressions(): super(globals: GLOBALS) {
     INSTANCE = this;
