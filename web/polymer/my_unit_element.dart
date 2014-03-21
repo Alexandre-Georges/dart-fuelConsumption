@@ -1,12 +1,13 @@
 library my_polymer_my_unit_element;
 
 import 'dart:html';
-import 'package:polymer/polymer.dart';
 
-import 'main_element.dart';
+import 'package:polymer/polymer.dart';
 
 import '../transformers/import.dart';
 import '../model/import.dart';
+
+import 'main_element.dart';
 
 @CustomTag('my-unit')
 class MyUnitElement extends MainElement {

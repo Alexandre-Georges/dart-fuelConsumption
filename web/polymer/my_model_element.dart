@@ -2,11 +2,10 @@ library my_polymer_my_model_element;
 
 import 'package:polymer/polymer.dart';
 
+import '../model/import.dart';
 import '../observers/import.dart';
 
 import 'main_element.dart';
-
-import '../model/import.dart';
 
 @CustomTag('my-model')
 class MyModelElement extends MainElement {
