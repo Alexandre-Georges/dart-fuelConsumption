@@ -50,6 +50,7 @@ class MyUnitElement extends MainElement {
   }
 
   void onMyChange(Event e, var detail, Node target) {
+    this.editing = false;
     this.displayValue = notifyPropertyChange(#value, this.displayValue, roundTwoDigit(this.unit.value));
   }
 
