@@ -1,4 +1,6 @@
 dart-unitConverter
 ====================
 
-Fuel consumption conversion in Dart
+Unit conversion in Dart.
+
+This project is a proof of concept and an exercise to learn Dart.
