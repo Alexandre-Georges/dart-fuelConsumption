@@ -1,4 +1,4 @@
-name: dart-fuelConsumption
+name: dart-unitConverter
 version: 0.0.1
 dependencies:
   browser: any
