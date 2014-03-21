@@ -2,7 +2,11 @@ library my_observers_object_observer;
 
 import 'dart:async';
 import 'dart:collection' show UnmodifiableListView;
+
+import '../model/import.dart';
+@MirrorsUsed(targets: const[Unit, Model], override: '*')
 import 'dart:mirrors';
+
 import 'package:observe/observe.dart';
 import 'object_change_record.dart';
 
