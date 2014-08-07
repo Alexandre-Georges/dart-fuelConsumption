@@ -19,8 +19,7 @@ class MyModelElement extends MainElement {
 
   MyModelElement.created() : super.created();
 
-  void enteredView() {
-    super.enteredView();
+  void attached() {
 
     ListObjectObserver<double> observer = new ListObjectObserver<double>(this.model.units, 'value');
     observer.changes.listen(this.updateUnit);

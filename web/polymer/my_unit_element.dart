@@ -35,13 +35,12 @@ class MyUnitElement extends MainElement {
 
   MyUnitElement.created() : super.created();
 
-  void enteredView() {
+  void attached() {
 
-    super.enteredView();
     this.displayValue = notifyPropertyChange(#value, this.displayValue, this.unit.value.toString());
     
     PathObserver observer = new PathObserver(this.unit, 'value');
-    observer.changes.listen((_) {
+    observer.open((_) {
       if (!this.editing) {
         this.displayValue = notifyPropertyChange(#value, this.displayValue, roundTwoDigit(this.unit.value));
       } else {
