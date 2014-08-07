@@ -9,9 +9,9 @@ import 'main_element.dart';
 
 @CustomTag('my-converter')
 class MyConverterElement extends MainElement {
-
+  
   @observable
-  List<Model> models = [];
+  List<Model> models = toObservable([]);
   
   static final List<String> COLORS = ['#ffff00', '#14d100', '#ffad00', '#a6a600'];
 
