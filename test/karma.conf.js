@@ -10,7 +10,6 @@ module.exports = function(config) {
       'test/*.dart',
       {pattern: 'web/**/*.dart', watched: true, included: false, served: true},
       'packages/browser/dart.js',
-      'packages/browser/interop.js'
     ],
 
     autoWatch: true,
